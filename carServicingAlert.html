@@ -61,7 +61,37 @@
         console.log("Is Working "+ car.isWorking);
         console.log("--------------------")
     }
-
+   
+    while(letter !== null){
+        letter = prompt("select 'h' for honk , 'd' for drive to work, 'w' for drive around the world, 't' for tuneup");
+        console.log(letter)
+        if(letter !==null){
+            letter = letter.toLowerCase()
+        }
+        if(letter === "h"){
+            car.honk();
+            reWriteLogs();
+        }
+        else if(letter === "d" && car.isWorking){
+            car.driveToWork();
+            reWriteLogs();
+        }
+        else if(letter === "w" && car.isWorking){
+            car.driveAroundWorld();
+            reWriteLogs();
+        }
+        else if((letter === "d"||letter ==="w")&& car.isWorking === false){
+            alert("Car need's to tune up")
+        }
+        else if( letter === "t"){
+            car.getTuneUp();
+            reWriteLogs();
+        }
+   
+        else{
+            alert("enter valid letter")
+        }
+    }
 
 
     </script>
