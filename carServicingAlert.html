@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(185, 183, 183);">
+    <h1>open Console to see the magic</h1>
+    <script type="text/javascript">
+    var letter;
+
+    //creating car object contains properties and functions
+    var car = {
+      make : "Infinity",
+      model:"Q50",
+      color :"Black",
+      mileage : 3000,
+      isWorking : true,
+
+
+      driveToWork : function(){
+          alert("old mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 8;
+
+          alert("New Mileage: "+ this.mileage);
+      },
+
+      driveAroundWorld : function(){
+          alert("old mileage" + this.mileage)
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: "+ this.mileage);
+
+          alert("Car needs tune up");
+
+          this.isWorking = false
+      },
+      
+    }
+
+    </script>
+</body>
+</html>
